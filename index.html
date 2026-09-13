@@ -23,16 +23,9 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  background: transparent;
+  background: #000;
   overflow: hidden;
 }
-
-.widget {
-  width: 100%;
-  max-width: 420px;
-  margin: 0 auto;
-}
-  }
 
   /* =========================
      WIDGET PRINCIPAL
@@ -43,24 +36,32 @@ body {
     width: 100%;
     max-width: 420px;
     aspect-ratio: 3 / 4;
-
     overflow: hidden;
     border-radius: 22px;
 
-    background:
-      linear-gradient(
+    background: linear-gradient(
         145deg,
         #ddd,
         #aaa
       );
 
-    box-shadow:
-      0 10px 30px rgba(0,0,0,0.18);
-
+    box-shadow: 0 10px 30px rgba(0,0,0,0.18);
     color: white;
   }
 
   /* Imagen de fondo */
+ .background {
+  position: absolute;
+  inset: 0;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  z-index: 0;
+
+  transition: background-image 0.3s ease;
+}
 
  html {
   background: #000;
